@@ -8,14 +8,14 @@ import { ViewUserComponent } from './users/view-user/view-user.component';
 
 const routes: Routes = [
   {
-    path:"create",
-    component:CreateUserComponent
-  },
-  {
-    path:"list",
+    path:"users",
     children:[
       {
         path:"",
+        component:ListUserComponent
+      },
+      {
+        path:"list",
         component:ListUserComponent
       },
       {
@@ -29,6 +29,10 @@ const routes: Routes = [
       {
         path:"delete/:id",
         component:DeleteUserComponent
+      },
+      {
+        path:"create",
+        component:CreateUserComponent
       },
     ]
   },
