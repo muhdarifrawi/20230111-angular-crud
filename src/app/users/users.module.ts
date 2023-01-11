@@ -8,6 +8,7 @@ import { ListUserComponent } from './list-user/list-user.component';
 
 // material ui api
 import {MatCardModule} from '@angular/material/card';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MatCardModule} from '@angular/material/card';
   ],
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    RouterModule
   ]
 })
 export class UsersModule { }
