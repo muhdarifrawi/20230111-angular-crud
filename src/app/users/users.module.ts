@@ -6,7 +6,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 
-
+// material ui api
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ListUserComponent } from './list-user/list-user.component';
     ListUserComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule
   ]
 })
 export class UsersModule { }

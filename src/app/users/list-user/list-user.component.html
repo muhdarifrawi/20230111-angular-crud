@@ -1,6 +1,7 @@
 <h1>Users</h1>
-<ul>
-    <li *ngFor="let user of listUsers">
-        {{user.name}}
-    </li>
-</ul>
+
+<mat-card *ngFor="let user of listUsers">
+    <mat-card-content>
+        <h1>{{user.name}}</h1>
+    </mat-card-content>
+</mat-card>
