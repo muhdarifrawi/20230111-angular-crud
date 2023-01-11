@@ -16,15 +16,15 @@ const routes: Routes = [
     component:ListUserComponent
   },
   {
-    path:"view",
+    path:"view/:id",
     component:ViewUserComponent
   },
   {
-    path:"edit",
+    path:"edit/:id",
     component:EditUserComponent
   },
   {
-    path:"delete",
+    path:"delete/:id",
     component:DeleteUserComponent
   },
 ];
