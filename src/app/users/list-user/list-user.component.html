@@ -3,7 +3,7 @@
 <mat-card *ngFor="let user of listUsers">
     <mat-card-content>
         <h1>{{user.name}}</h1>
-        <a href="">View</a> |
+        <a [routerLink]="['/users/view',user.id]">View</a> |
         <a [routerLink]="['/users/edit',user.id]">Edit</a> |
         <a [routerLink]="['/users/delete',user.id]">Delete</a>
     </mat-card-content>
