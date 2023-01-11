@@ -10,9 +10,13 @@ export class ListUserComponent implements OnInit{
 
   constructor(private userService:UserService){}
 
+  listUsers:any
+
   ngOnInit(): void {
     this.userService.listUsers().subscribe((data)=>{
         console.log(data)
+
+        this.listUsers = data
       }
     )
   }
