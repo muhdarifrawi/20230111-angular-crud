@@ -4,6 +4,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+// material ui api
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 @NgModule({
@@ -13,7 +18,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     SidebarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   exports: [
     HeaderComponent,
