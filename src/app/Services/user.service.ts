@@ -12,6 +12,6 @@ export class UserService {
   baseUrl:string="https://jsonplaceholder.cypress.io/"
 
   listUsers(){
-    this.http.get(this.baseUrl+"users")
+    return this.http.get(this.baseUrl+"users")
   }
 }
