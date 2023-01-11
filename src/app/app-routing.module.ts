@@ -13,20 +13,26 @@ const routes: Routes = [
   },
   {
     path:"list",
-    component:ListUserComponent
+    children:[
+      {
+        path:"",
+        component:ListUserComponent
+      },
+      {
+        path:"view/:id",
+        component:ViewUserComponent
+      },
+      {
+        path:"edit/:id",
+        component:EditUserComponent
+      },
+      {
+        path:"delete/:id",
+        component:DeleteUserComponent
+      },
+    ]
   },
-  {
-    path:"view/:id",
-    component:ViewUserComponent
-  },
-  {
-    path:"edit/:id",
-    component:EditUserComponent
-  },
-  {
-    path:"delete/:id",
-    component:DeleteUserComponent
-  },
+  
 ];
 
 @NgModule({
