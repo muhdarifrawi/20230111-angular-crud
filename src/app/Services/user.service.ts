@@ -8,4 +8,10 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   constructor(private http:HttpClient) { }
+
+  baseUrl:string="https://jsonplaceholder.cypress.io/"
+
+  listUsers(){
+    this.http.get(this.baseUrl+"users")
+  }
 }
