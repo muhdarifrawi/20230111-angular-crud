@@ -15,7 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSnackBarModule, MAT_SNACK_BAR_DATA, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
 
 
 
@@ -38,6 +38,13 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatButtonModule,
     MatSnackBarModule,
     RouterModule
+  ],
+  providers:[
+    {
+      // make it such that the snackbar closes in 3seconds
+      provide:MAT_SNACK_BAR_DEFAULT_OPTIONS, 
+      useValue:{duration:3000}
+    }
   ]
 })
 export class UsersModule { }
