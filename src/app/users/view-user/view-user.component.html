@@ -1,15 +1,16 @@
-<div *ngIf="userDetails">
-    <h1>{{userDetails.name}}</h1>
-    <p>Email: {{userDetails.email}}</p>
-    <p>Contact No.: {{userDetails.phone}}</p>
-    <p>Website: {{userDetails.website}}</p>
-    
-    <p>Address:</p>
-    <p *ngFor="let item of userDetails.address | keyvalue">
-        <span *ngIf="item.key!='geo'">
-            {{item.key}}: {{item.value}}
-        </span>
-        
-    </p>
+<mat-card  *ngIf="userDetails">
+    <mat-card-content>
+        <h1>{{userDetails.name}}</h1>
+        <p>Email: {{userDetails.email}}</p>
+        <p>Contact No.: {{userDetails.phone}}</p>
+        <p>Website: {{userDetails.website}}</p>
 
-</div>
+        <p>Address:</p>
+        <p *ngFor="let item of userDetails.address | keyvalue">
+            <span *ngIf="item.key!='geo'">
+                {{item.key}}: {{item.value}}
+            </span>
+
+        </p>
+    </mat-card-content>
+</mat-card>
