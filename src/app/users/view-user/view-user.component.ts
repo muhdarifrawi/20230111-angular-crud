@@ -12,6 +12,7 @@ export class ViewUserComponent implements OnInit {
   constructor(private userService:UserService, private activatedRoute:ActivatedRoute){}
 
   userId:any
+  userDetails:any
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((data)=>{
@@ -23,6 +24,7 @@ export class ViewUserComponent implements OnInit {
 
     this.userService.viewUser(this.userId).subscribe((data)=>{
         console.log(data)
+        this.userDetails = data
       }
     )
   }
