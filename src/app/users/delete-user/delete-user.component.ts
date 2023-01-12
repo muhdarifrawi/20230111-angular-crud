@@ -26,7 +26,6 @@ export class DeleteUserComponent implements OnInit {
           console.log("user deleted")
           this.openSnackBar("User deleted successfully!", "Dismiss")
           this.router.navigate(['/users']);
-
         })
       }
     
